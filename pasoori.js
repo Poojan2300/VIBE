@@ -1,12 +1,12 @@
 let songnumber = 0;
-let audioElement = new Audio('songk1/5.mp3');
+let audioElement = new Audio('../songs/songs-second-5/5.mp3');
 let play = document.getElementById('play');
 let myProgressBar = document.getElementById('myProgressBar');
 let song = document.getElementById('song');
 let songmains = Array.from(document.getElementsByClassName('songmain'));
 
 let songs = [
-    {song: "Kesariya", filePath: "songk1/5.mp3" },
+    {song: "Kesariya", filePath: "../songs/songs-second-5/5.mp3" },
      
     
 ]
@@ -67,7 +67,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songnumber += 1;
     }
-    audioElement.src = `songk1/.mp3`;
+    audioElement.src = `../songs/songs-second-5/.mp3`;
     song.innerText = songk1[songnumber].song;
     audioElement.currentTime = 0;
     audioElement.play();
@@ -83,7 +83,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songnumber -= 1;
     }
-    audioElement.src = `songk1/${songnumber+1}.mp3`;
+    audioElement.src = `../songs/songs-second-5/${songnumber+1}.mp3`;
     song.innerText = songk1[songnumber].song;
     audioElement.currentTime = 1;
     audioElement.play();
